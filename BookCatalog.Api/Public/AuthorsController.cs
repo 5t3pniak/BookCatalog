@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace BookCatalog.Api.Public;
 
 [ApiController]
-[Route("[controller]")]
+[Route("api/[controller]")]
 public class AuthorsController(IAuthorsHandler authorsHandler) : ControllerBase
 {
     [HttpGet]

@@ -56,7 +56,7 @@ http://localhost:8080
 ```
 > For local dev without Docker Compose the base address is `http://localhost:5000`.
 
-### `GET /authors`
+### `GET /api/authors`
 
 Returns a paginated list of authors.
 
@@ -68,12 +68,12 @@ Returns a paginated list of authors.
 
 **Example**
 ```
-GET /authors?page=1&page_size=5&sort_by=name:desc
+GET /api/authors?page=1&page_size=5&sort_by=name:desc
 ```
 
 ---
 
-### `GET /books`
+### `GET /api/books`
 
 Returns a paginated, filterable list of books.
 
@@ -89,19 +89,19 @@ Returns a paginated, filterable list of books.
 
 **Example**
 ```
-GET /books?author=adam-mickiewicz&sort_by=title:asc
+GET /api/books?author=adam-mickiewicz&sort_by=title:asc
 ```
 
 ---
 
-### `GET /books/{slug}`
+### `GET /api/books/{slug}`
 
 Returns a single book by slug, including its linked authors.
 Returns **404** if not found.
 
 **Example**
 ```
-GET /books/pan-tadeusz
+GET /api/books/pan-tadeusz
 ```
 
 ---
@@ -222,8 +222,8 @@ BookCatalog/
 │   │   ├── SerilogExtensions.cs      # AddSerilogLogging, UseStructuredRequestLogging
 │   │   └── OpenTelemetryExtensions.cs # AddObservability
 │   ├── Public/
-│   │   ├── AuthorsController.cs      # GET /authors
-│   │   └── BooksController.cs        # GET /books, GET /books/{slug}
+│   │   ├── AuthorsController.cs      # GET /api/authors
+│   │   └── BooksController.cs        # GET /api/books, GET /api/books/{slug}
 │   ├── Internal/
 │   │   └── SyncTriggerController.cs  # POST /internal/api/sync
 │   ├── GlobalExceptionHandler.cs
