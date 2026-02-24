@@ -1,0 +1,42 @@
+# Build output
+**/bin/
+**/obj/
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.DotSettings.user
+
+# Rider / JetBrains
+.idea/
+*.DotSettings
+
+# Test results & coverage
+**/TestResults/
+**/coverage/
+**/*.trx
+**/*.coveragexml
+*.coverage
+
+# NuGet
+packages/
+*.nupkg
+project.lock.json
+project.fragment.lock.json
+
+# Publish output
+**/publish/
+
+# Environment / secrets — copy .env.example and fill in values
+.env
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Logs
+*.log
+logs/

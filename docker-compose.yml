@@ -1,0 +1,44 @@
+services:
+
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sql2022
+    hostname: sql2022
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "MyStrong@Password1"
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql_data:/var/opt/mssql
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools18/bin/sqlcmd -S localhost -U SA -P 'MyStrong@Password1' -Q 'SELECT 1' -C"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+    restart: unless-stopped
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: bookcatalog_api
+    ports:
+      - "8080:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ConnectionStrings__BookCatalogDbContext: >-
+        Data Source=db,1433;Initial Catalog=BookCatalogDb;
+        User Id=SA;Password=MyStrong@Password1;
+        TrustServerCertificate=True;MultipleActiveResultSets=true
+      # Optional — point to an OTLP collector (Jaeger, Grafana Alloy, etc.)
+      # OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+      # Serilog__WriteTo__1__Args__endpoint: http://otel-collector:4318/v1/logs
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  mssql_data:

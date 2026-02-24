@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookCatalog.Api", "BookCatalog.Api\BookCatalog.Api.csproj", "{928ED103-3960-4237-9942-9DDC1DBEBD30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookCatalog.Persistence", "BookCatalog.Persistence\BookCatalog.Persistence.csproj", "{920C8B74-FE62-4C04-9429-F9567F52CE67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookCatalog.ApplicationCore", "BookCatalog.ApplicationCore\BookCatalog.ApplicationCore.csproj", "{83549011-0A7D-4996-8881-B5FAAA4B5AAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookCatalog.Integrations", "BookCatalog.Integrations\BookCatalog.Integrations.csproj", "{FC67E30D-E761-4B39-946F-396C74E9776B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookCatalog.ApplicationCore.Tests", "BookCatalog.ApplicationCore.Tests\BookCatalog.ApplicationCore.Tests.csproj", "{8929C463-CBBF-42FE-8910-AF0AB16DDEE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookCatalog.Api.Tests", "BookCatalog.Api.Tests\BookCatalog.Api.Tests.csproj", "{7DC10E40-AC2D-4C93-B551-649D79E00E94}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{928ED103-3960-4237-9942-9DDC1DBEBD30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{928ED103-3960-4237-9942-9DDC1DBEBD30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{928ED103-3960-4237-9942-9DDC1DBEBD30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{928ED103-3960-4237-9942-9DDC1DBEBD30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{920C8B74-FE62-4C04-9429-F9567F52CE67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{920C8B74-FE62-4C04-9429-F9567F52CE67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{920C8B74-FE62-4C04-9429-F9567F52CE67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{920C8B74-FE62-4C04-9429-F9567F52CE67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83549011-0A7D-4996-8881-B5FAAA4B5AAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83549011-0A7D-4996-8881-B5FAAA4B5AAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83549011-0A7D-4996-8881-B5FAAA4B5AAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83549011-0A7D-4996-8881-B5FAAA4B5AAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC67E30D-E761-4B39-946F-396C74E9776B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC67E30D-E761-4B39-946F-396C74E9776B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC67E30D-E761-4B39-946F-396C74E9776B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC67E30D-E761-4B39-946F-396C74E9776B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8929C463-CBBF-42FE-8910-AF0AB16DDEE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8929C463-CBBF-42FE-8910-AF0AB16DDEE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8929C463-CBBF-42FE-8910-AF0AB16DDEE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8929C463-CBBF-42FE-8910-AF0AB16DDEE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DC10E40-AC2D-4C93-B551-649D79E00E94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DC10E40-AC2D-4C93-B551-649D79E00E94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DC10E40-AC2D-4C93-B551-649D79E00E94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DC10E40-AC2D-4C93-B551-649D79E00E94}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

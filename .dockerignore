@@ -1,0 +1,19 @@
+**/.git
+**/.vs
+**/.idea
+**/.DS_Store
+**/bin
+**/obj
+**/TestResults
+**/*.user
+**/coverage
+
+# Test projects — not needed in the image
+BookCatalog.Api.Tests/
+BookCatalog.ApplicationCore.Tests/
+
+# Docker files themselves
+Dockerfile
+docker-compose.yml
+.dockerignore
+README.md
